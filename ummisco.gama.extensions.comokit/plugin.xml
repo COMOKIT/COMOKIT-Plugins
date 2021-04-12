@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               id="COMOKIT"
+               label="COMOKIT">
+            <command
+                  commandId="comokit.gama.commands.GenerateEnvironment"
+                  id="comokit.gama.application.commands.GenerateGISData"
+                  label="Generate GIS environment"
+                  style="push">
+               <visibleWhen
+                     checkEnabled="true">
+               </visibleWhen>
+            </command>
+            <command
+                  commandId="comokit.gama.commands.LocateCOMOKIT"
+                  id="comokit.gama.application.commands.LocateCOMOKIT"
+                  label="Locate COMOKIT"
+                  style="push">
+               <visibleWhen
+                     checkEnabled="true">
+               </visibleWhen>
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="ummisco.gama.extensions.comokit.commands.GenerateGISEnvironment"
+            id="comokit.gama.commands.GenerateEnvironment"
+            name="Generate GIS Environment">
+      </command>
+      <command
+            defaultHandler="ummisco.gama.extensions.comokit.commands.DefineCOMOKITLocation"
+            id="comokit.gama.commands.LocateCOMOKIT"
+            name="Location of COMOKIT">
+      </command>
+   </extension>
+
+</plugin>

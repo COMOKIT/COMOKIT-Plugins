@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Comokit
+Bundle-SymbolicName: ummisco.gama.extensions.comokit;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: ummisco.extnesions.comokit
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: msi.gama.core;bundle-version="1.8.1",
+ msi.gama.ext;bundle-version="1.8.1",
+ org.eclipse.ui
+Export-Package: ummisco.gama.extensions.comokit.commands
+Bundle-ActivationPolicy: lazy
+Import-Package: msi.gama.lang.gaml.resource,
+ msi.gama.lang.gaml.validation,
+ org.eclipse.xtext.resource
