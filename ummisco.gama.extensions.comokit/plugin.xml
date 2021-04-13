@@ -26,20 +26,34 @@
                      checkEnabled="true">
                </visibleWhen>
             </command>
+            <command
+                  commandId="comokit.gama.commands.createCaseStudy"
+                  id="comokit.gama.commands.createCaseStudy"
+                  label="Create a case study"
+                  style="push">
+               <visibleWhen
+                     checkEnabled="true">
+               </visibleWhen>
+            </command>
          </menu>
       </menuContribution>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="ummisco.gama.extensions.comokit.commands.GenerateGISEnvironment"
-            id="comokit.gama.commands.GenerateEnvironment"
-            name="Generate GIS Environment">
-      </command>
-      <command
             defaultHandler="ummisco.gama.extensions.comokit.commands.DefineCOMOKITLocation"
             id="comokit.gama.commands.LocateCOMOKIT"
             name="Location of COMOKIT">
+      </command>
+      <command
+            defaultHandler="ummisco.gama.extensions.comokit.commands.CreateCaseStudy"
+            id="comokit.gama.commands.createCaseStudy"
+            name="Create a new case study">
+      </command>
+      <command
+            defaultHandler="ummisco.gama.extensions.comokit.commands.GenerateGISEnvironment"
+            id="comokit.gama.commands.GenerateEnvironment"
+            name="Generate GIS Environment">
       </command>
    </extension>
 
