@@ -19,7 +19,6 @@ import org.eclipse.ui.internal.ide.IDEWorkbenchPlugin;
 
 import msi.gama.application.workspace.WorkspacePreferences;
 import msi.gama.runtime.GAMA;
-import msi.gama.runtime.exceptions.GamaRuntimeException;
 import msi.gama.util.GamaListFactory;
 import msi.gama.util.IList;
 import msi.gama.util.IMap;
@@ -49,7 +48,7 @@ public class CreateCaseStudy extends AbstractHandler{
 		}
 		IList l = GamaListFactory.create();
 		l.add(System.enterValue(GAMA.getRuntimeScope(), "Name of the new case stuty", "New case study"));
-		IMap<String,Object> result = System.userInput(GAMA.getRuntimeScope(), l);
+		IMap<String,Object> result = System.userInputDialog(GAMA.getRuntimeScope(), l);
 		if (result == null) return null;
 		String projectName = (String) result.get("Name of the new case stuty");
 		if (projectName == "") {

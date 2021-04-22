@@ -15,7 +15,6 @@ import msi.gama.util.file.GamaFolderFile;
 import msi.gaml.operators.System;
 import msi.gaml.types.IType;
 import msi.gaml.types.Types;
-import ummisco.gama.ui.utils.WorkbenchHelper;
 
 
 public class DefineCOMOKITLocation extends AbstractHandler{
@@ -27,7 +26,7 @@ public class DefineCOMOKITLocation extends AbstractHandler{
 		
 		IList l = GamaListFactory.create();
 		l.add(System.enterValue(GAMA.getRuntimeScope(), "COMOKIT Folder", Types.get(IType.DIRECTORY), new GamaFolderFile(GAMA.getRuntimeScope(), COMOKIT_PATH, false)));
-		IMap<String,Object> result = System.userInput(GAMA.getRuntimeScope(), l);
+		IMap<String,Object> result = System.userInputDialog(GAMA.getRuntimeScope(), l);
 		if (result == null || (result.get("COMOKIT Folder") == null)) return null;
 		String path =((GamaFolderFile) result.get("COMOKIT Folder")).getPath(null);
 		if (path != null) {
