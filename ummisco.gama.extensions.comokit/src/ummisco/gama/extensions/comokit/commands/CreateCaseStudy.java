@@ -18,6 +18,7 @@ import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.ui.internal.ide.IDEWorkbenchPlugin;
 
 import msi.gama.application.workspace.WorkspacePreferences;
+import msi.gama.precompiler.GamlAnnotations.operator;
 import msi.gama.runtime.GAMA;
 import msi.gama.util.GamaListFactory;
 import msi.gama.util.IList;
